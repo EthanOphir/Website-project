@@ -1,4 +1,4 @@
-# structure-exercise
+# website project
 
 
-We're learning HTML.
+We're making a website for the Death Star Hotel. 
