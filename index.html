@@ -43,34 +43,53 @@
 
 
             <div class="position-relative">
-                <div class="position-absolute bottom-500 start-50 translate-middle-x">
                     <img 
                         src="https://static.wikia.nocookie.net/disney/images/b/ba/Death_Star-RO_U_Visual_Guide.png/revision/latest?cb=20170104184600" 
                         alt="Death Star"
                         height="300px"
                     >
-                </div>
             </div>
 
             
-                <h2>Second Level Heading</h2>
-                <p>This is some text</p>
+            <div>
 
-                <h3>Third Level Heading</h3>
-                <p>This is some text</p>
+                <h3>Experience the Magic that is the Death Star</h3>
+                <p>A Once in a Lifetime Opportunity</p>
 
-                <h4>Fourth Level Heading</h4>
-                <p>This is some text</p>
+                <img 
+                src="https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/410/205/75/dam/disney-world/destinations/hotel-resort/2587417pod.jpg?1635969375233" 
+                alt="Death Star Hallway"
+                height="300px"
+                >
 
-                <h5>Fifth Level Heading</h5>
-                <p>This is some text</p>
+                <img 
+                src="https://cdn1.parksmedia.wdprapps.disney.com/resize/mwImage/1/1600/900/75/dam/disney-world/destinations/hotel-resort/258743atrium.jpg?1635969344504" 
+                alt="Death Star Interior"
+                height="300px"
+                >
 
-                <h6>Sixth Level Heading</h6>
-                <p>This is some text</p>
-           
+                <h2>Reviews</h2>
+
+                <h5>"A Vacation Like No Other"</h5>
+                <p>~Tatooine Times</p>
+
+                <h5>"It Truly is Out of this world"</h5>
+                <p>~Endor Gazette</p>
+
+                <h5>"RRRRRAAAAA RRAA RRRRRRAAAAAAA"</h5>
+                <p>~Wookie Warbler</p>
+                
+                
+                <div id="liveAlertPlaceholder"></div>
+                <button type="button" class="btn btn-primary" id="liveAlertBtn">Live Travel Alerts</button>
+                
+
+                
+                
                 <footer>
                     &#169 Death Star Inc. All Rights Reserved
                 </footer>
+            </div>
          </div> 
 
 
@@ -82,6 +101,22 @@
   gtag('js', new Date());
 
   gtag('config', 'G-DM5XY7EDQ5');
+
+  var alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+                var alertTrigger = document.getElementById('liveAlertBtn')
+                
+                function alert(message, type) {
+                  var wrapper = document.createElement('div')
+                  wrapper.innerHTML = '<div class="alert alert-' + type + ' alert-dismissible" role="alert">' + message + '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>'
+                
+                  alertPlaceholder.append(wrapper)
+                }
+                
+                if (alertTrigger) {
+                  alertTrigger.addEventListener('click', function () {
+                    alert('Be aware of dangerous rebel fugitives onboard!!!', 'success')
+                  })
+                }
 </script>
 
 </body>
